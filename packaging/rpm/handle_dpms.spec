@@ -26,7 +26,7 @@ This package provides a handler for DPMS plug and unplug events
 gcc %{optflags} -o %{name} %{name}.c %{build_ldflags}
 
 %install
-install -D -m 0640 %{name}.service %{buildroot}%{_unitdir}/%{name}.service
+install -D -m 0644 %{name}.service %{buildroot}%{_unitdir}/%{name}.service
 install -D -m 0750 dpms-event.sh %{buildroot}%{_libexecdir}/dpms-event.sh
 install -D -m 0750 %{name} %{buildroot}%{_libexecdir}/%{name}
 
