@@ -9,6 +9,7 @@ License:        MIT
 
 Buildrequires:  coreutils
 Buildrequires:  gcc
+Buildrequires:  systemd-rpm-macros
 Source:         %{ghurl}/archive/refs/tags/%{version}.tar.gz?fn=%{name}-%{version}.tar.gz
 URL:            %{ghurl}
 
@@ -22,11 +23,11 @@ This package provides a handler for DPMS plug and unplug events
 %setup -q
 
 %build
-gcc -Wall -o %{name} %{name}.c
+gcc -g -Wall -o %{name} %{name}.c
 
 %install
 install -D -m 0640 %{name}.service %{buildroot}%{_unitdir}/%{name}.service
-install -D -m 0750 dpms-event.sh %{buildroot}%{_libexecdir}
+install -D -m 0750 dpms-event.sh %{buildroot}%{_libexecdir}/dpms-event.sh
 install -D -m 0750 %{name} %{buildroot}%{_bindir}/%{name}
 
 %files
