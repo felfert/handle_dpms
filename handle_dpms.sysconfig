@@ -1,0 +1,8 @@
+# Script to be executed, whenever a DPMS event is triggered.
+#
+# The script will be invoked with ONE parameter 'on' or 'off'
+# on  == Display switched on
+# off == Display switched off
+#
+# Default:
+#EVENT_SCRIPT=/usr/libexec/dpms-event.sh

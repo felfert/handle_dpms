@@ -2,6 +2,7 @@
 Description=DPMS event handler
 
 [Service]
+EnvironmentFile=-/etc/sysconfig/handle_dpms
 ExecStart=/usr/libexec/handle_dpms
 
 [Install]

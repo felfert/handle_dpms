@@ -78,7 +78,8 @@ static time_t last_run_time = -1;
 
 static void run_event_handler(int on) {
     char cmd[1024];
-    if (sizeof(cmd) <= snprintf(cmd, sizeof(cmd), "%s %s", DPMS_EVENT_CMD, on ? "on" : "off")) {
+    const char *script = getenv("EVENT_SCRIPT") ? getenv("EVENT_SCRIPT") : DPMS_EVENT_CMD;
+    if (sizeof(cmd) <= snprintf(cmd, sizeof(cmd), "%s %s", script, on ? "on" : "off")) {
         fprintf(stderr, "cmd buffer overflow. NOT executing event-funtion\n");
         return;
     }
