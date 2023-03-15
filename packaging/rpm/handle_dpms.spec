@@ -23,7 +23,7 @@ This package provides a handler for DPMS plug and unplug events
 %setup -q
 
 %build
-gcc -g -Wall -o %{name} %{name}.c
+gcc %{optflags} -o %{name} %{name}.c %{build_ldflags}
 
 %install
 install -D -m 0640 %{name}.service %{buildroot}%{_unitdir}/%{name}.service
