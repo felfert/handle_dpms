@@ -1,3 +1,4 @@
+[Unit]
 Description=DPMS event handler
 
 [Service]
