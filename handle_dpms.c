@@ -23,7 +23,7 @@
 #endif
 #endif /* __GLIBC__ */
 
-static const char *DPMS_EVENT_CMD = "/usr/local/libexec/dpms-event.sh";
+static const char *DPMS_EVENT_CMD = "/usr/libexec/dpms-event.sh";
 static const char *ACPI_SOCK = "/var/run/acpid.socket";
 
 #define MAX_BUFLEN	1024
