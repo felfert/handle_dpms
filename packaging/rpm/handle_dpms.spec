@@ -1,7 +1,7 @@
 %global ghurl   https://github.com/felfert/%{name}
 
 Name:           handle_dpms
-Version:        0.2
+Version:        0.3
 Release:        1%{?dist}
 Summary:        Handle DPMS events
 
