@@ -32,9 +32,9 @@ install -D -m 0750 %{name} %{buildroot}%{_libexecdir}/%{name}
 
 %files
 %doc README.md
-%{_bindir}/%{name}
-%{_unitdir}/%{name}.service
+%{_libexecdir}/%{name}
 %{_libexecdir}/dpms-event.sh
+%{_unitdir}/%{name}.service
 
 %post
 %systemd_post %{name}.service
