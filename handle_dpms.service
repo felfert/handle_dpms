@@ -1,0 +1,7 @@
+Description=DPMS event handler
+
+[Service]
+ExecStart=/usr/local/libexec/handle_dpms
+
+[Install]
+WantedBy=multi-user.target
